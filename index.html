@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="MyFistApp">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS CodigoFacilito</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	<script src="controller.js"></script>
+</head>
+<body ng-controller="FirstController">
+	<!--{{ "Hola"+" mundo" }}-->
+	<input type="text" ng-model="nombre">
+	{{"Hola "+nombre}}
+	<br><br><br>
+	<h3>Comentarios</h3>
+	<ul>
+		<li ng-repeat="comentario in comentarios">
+			{{ comentario.comentario }} - <strong>{{ comentario.username }}</strong>
+		</li>
+	</ul>
+</body>
+</html>
